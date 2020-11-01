@@ -1,0 +1,88 @@
+[debug] [2020-11-01T01:23:36.209Z] ----------------------------------------------------------------------
+[debug] [2020-11-01T01:23:36.212Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\natyj\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2020-11-01T01:23:36.212Z] CLI Version:   8.14.1
+[debug] [2020-11-01T01:23:36.212Z] Platform:      win32
+[debug] [2020-11-01T01:23:36.212Z] Node Version:  v14.7.0
+[debug] [2020-11-01T01:23:36.214Z] Time:          Sat Oct 31 2020 22:23:36 GMT-0300 (hora de verano de Chile)
+[debug] [2020-11-01T01:23:36.214Z] ----------------------------------------------------------------------
+[debug] [2020-11-01T01:23:36.214Z] 
+[debug] [2020-11-01T01:23:36.222Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-11-01T01:23:36.223Z] > authorizing via signed-in user
+[debug] [2020-11-01T01:23:36.223Z] [iam] checking project otto-klaus-5a72a for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-11-01T01:23:36.227Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/otto-klaus-5a72a:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-11-01T01:23:37.228Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 01 Nov 2020 01:24:57 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=807","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-11-01T01:23:37.230Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/otto-klaus-5a72a  
+ 
+[debug] [2020-11-01T01:23:38.117Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 01 Nov 2020 01:24:58 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'otto-klaus-5a72a'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2020-11-01T01:23:38.142Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/otto-klaus-5a72a/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2020-11-01T01:23:39.936Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 01 Nov 2020 01:25:00 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[otto-klaus-5a72a]: beginning deploy... 
+[debug] [2020-11-01T01:23:39.947Z] Error: EPERM: operation not permitted, scandir 'C:/Users/natyj/OneDrive/Escritorio/Otto-Klaus/ottoklaus2/dist/css/about.b1de4f2a.css'
+    at Object.readdirSync (fs.js:981:3)
+    at GlobSync._readdir (C:\Users\natyj\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:288:41)
+    at GlobSync._readdirInGlobStar (C:\Users\natyj\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:245:17)
+    at GlobSync._readdir (C:\Users\natyj\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:276:17)
+    at GlobSync._processReaddir (C:\Users\natyj\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:137:22)
+    at GlobSync._process (C:\Users\natyj\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:132:10)
+    at GlobSync._processGlobStar (C:\Users\natyj\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:380:10)
+    at GlobSync._process (C:\Users\natyj\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:130:10)
+    at GlobSync._processGlobStar (C:\Users\natyj\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:383:10)
+    at GlobSync._process (C:\Users\natyj\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:130:10)
+    at new GlobSync (C:\Users\natyj\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:48:10)
+    at Function.globSync [as sync] (C:\Users\natyj\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:26:10)
+    at listFiles (C:\Users\natyj\AppData\Roaming\npm\node_modules\firebase-tools\lib\listFiles.js:6:19)
+    at _runDeploys (C:\Users\natyj\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\hosting\deploy.js:30:23)
+    at module.exports (C:\Users\natyj\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\hosting\deploy.js:66:12)
+    at _chain (C:\Users\natyj\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:23:40)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2020-11-01T01:24:29.551Z] ----------------------------------------------------------------------
+[debug] [2020-11-01T01:24:29.553Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\natyj\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2020-11-01T01:24:29.553Z] CLI Version:   8.14.1
+[debug] [2020-11-01T01:24:29.553Z] Platform:      win32
+[debug] [2020-11-01T01:24:29.553Z] Node Version:  v14.7.0
+[debug] [2020-11-01T01:24:29.554Z] Time:          Sat Oct 31 2020 22:24:29 GMT-0300 (hora de verano de Chile)
+[debug] [2020-11-01T01:24:29.555Z] ----------------------------------------------------------------------
+[debug] [2020-11-01T01:24:29.555Z] 
+[debug] [2020-11-01T01:24:29.562Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-11-01T01:24:29.563Z] > authorizing via signed-in user
+[debug] [2020-11-01T01:24:29.563Z] [iam] checking project otto-klaus-5a72a for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-11-01T01:24:29.566Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/otto-klaus-5a72a:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-11-01T01:24:30.516Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 01 Nov 2020 01:25:51 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=898","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-11-01T01:24:30.518Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/otto-klaus-5a72a  
+ 
+[debug] [2020-11-01T01:24:30.749Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 01 Nov 2020 01:25:51 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'otto-klaus-5a72a'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2020-11-01T01:24:30.764Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/otto-klaus-5a72a/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2020-11-01T01:24:32.195Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 01 Nov 2020 01:25:52 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[otto-klaus-5a72a]: beginning deploy... 
+[debug] [2020-11-01T01:24:32.204Z] Error: EPERM: operation not permitted, scandir 'C:/Users/natyj/OneDrive/Escritorio/Otto-Klaus/ottoklaus2/dist/css/about.b1de4f2a.css'
+    at Object.readdirSync (fs.js:981:3)
+    at GlobSync._readdir (C:\Users\natyj\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:288:41)
+    at GlobSync._readdirInGlobStar (C:\Users\natyj\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:245:17)
+    at GlobSync._readdir (C:\Users\natyj\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:276:17)
+    at GlobSync._processReaddir (C:\Users\natyj\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:137:22)
+    at GlobSync._process (C:\Users\natyj\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:132:10)
+    at GlobSync._processGlobStar (C:\Users\natyj\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:380:10)
+    at GlobSync._process (C:\Users\natyj\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:130:10)
+    at GlobSync._processGlobStar (C:\Users\natyj\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:383:10)
+    at GlobSync._process (C:\Users\natyj\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:130:10)
+    at new GlobSync (C:\Users\natyj\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:48:10)
+    at Function.globSync [as sync] (C:\Users\natyj\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:26:10)
+    at listFiles (C:\Users\natyj\AppData\Roaming\npm\node_modules\firebase-tools\lib\listFiles.js:6:19)
+    at _runDeploys (C:\Users\natyj\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\hosting\deploy.js:30:23)
+    at module.exports (C:\Users\natyj\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\hosting\deploy.js:66:12)
+    at _chain (C:\Users\natyj\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:23:40)
+[error] 
+[error] Error: An unexpected error has occurred.

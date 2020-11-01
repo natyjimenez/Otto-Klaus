@@ -8,6 +8,27 @@
   </div>
 </template>
 
+
+<script>
+import { mapActions } from "vuex";
+
+export default {
+  name: "App",
+  data() {
+    return {
+      
+    }
+  },
+  created () {
+    this.getData();
+  },
+  methods: {
+    ...mapActions("Datos", ["getData"] )
+  }
+}
+</script>
+
+
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -16,10 +37,8 @@
   text-align: center;
   color: #2c3e50;
 }
-
 #nav {
   padding: 30px;
-
   a {
     font-weight: bold;
     color: #2c3e50;
